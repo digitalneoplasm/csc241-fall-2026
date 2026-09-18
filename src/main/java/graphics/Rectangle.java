@@ -11,6 +11,12 @@ public class Rectangle extends GraphicObject{
     }
 
     @Override
+    void resize(double multiplier) {
+        length = length * multiplier;
+        width *= multiplier;
+    }
+
+    @Override
     public String toString() {
         return "Rectangle: " + length + " x " + width + " at " + super.toString();
     }

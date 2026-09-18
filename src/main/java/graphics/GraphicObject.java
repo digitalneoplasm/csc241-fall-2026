@@ -1,6 +1,6 @@
 package graphics;
 
-public class GraphicObject implements Movable{
+public abstract class GraphicObject implements Movable{
     private int x;
     private int y;
 
@@ -14,6 +14,8 @@ public class GraphicObject implements Movable{
         this.x = x;
         this.y = y;
     }
+
+    abstract void resize(double multiplier);
 
     @Override
     public String toString() {

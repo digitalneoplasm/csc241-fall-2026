@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<detectives>
+	<!-- Detectives have types, names, country, and sometimes address-->
+	<detective type="amateur">
+		<name>Jane Marple</name>
+		<address street="" town="St. Mary Mead"/>
+		<country>United Kingdom</country>
+	</detective>
+	<detective type="amateur">
+		<name>Nancy Drew</name>
+		<address street="" town="River Heights"/>
+		<country>United States</country>
+	</detective>
+	<detective type="private">
+		<name>Sherlock Holmes</name>
+		<address street="221B Baker Street" town="London"/>
+		<country>United Kingdom</country>
+	</detective>
+	<detective type="private">
+		<name>Hercule Poirot</name>
+		<country>United Kingdom</country>
+	</detective>
+	<detective type="amateur">
+		<name>Jessica Fletcher</name>
+		<address street="698 Candlewood Lane" town="Cabot Cove"/>
+		<country>United States</country>
+	</detective>
+	<detective type="private">
+		<name>Benoit Blanc</name>
+		<address street="" town="Boston"/>
+		<country>United States</country>
+		</detective>
+	<detective type="professional">
+		<name>Fox Mulder</name>
+		<address street="" town="Washington, D.C."/>
+		<country>United States</country>
+	</detective>
+	<detective type="professional">
+		<name>Endeavor Morse</name>
+		<address street="" town="Oxford"/>
+		<country>United Kingdom</country>
+	</detective>
+	<detective type="professional">
+		<name>Shabor Dasgupta</name>
+		<address street="" town="Kolkata"/>
+		<country>India</country>
+	</detective>
+	<detective type="professional">
+		<name>L Lawliet</name>
+		<country>Japan</country>
+	</detective>
+	<detective type="professional">
+		<name>Jacques Clouseau</name>
+		<country>France</country>
+	</detective>
+</detectives>
