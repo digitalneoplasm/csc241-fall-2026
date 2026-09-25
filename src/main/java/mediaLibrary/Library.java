@@ -29,7 +29,8 @@ public class Library {
     }
 
     private String stringifyList(ArrayList<?> list, String category) {
-        StringBuilder result = new StringBuilder(category + "\n");
+        StringBuilder result = new StringBuilder('\n' + category + "\n");
+        result.repeat("-", category.length()).append('\n');
         for (Object o : list) {
             result.append(o.toString()).append("\n");
         }
