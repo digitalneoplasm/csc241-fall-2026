@@ -5,14 +5,14 @@
  *
  * This program has RIDICULOUS amounts of comments, to take notes on our
  * thought process and help you remember why we wrote code as we did.
- *
+ * Don't write this many comments in your code!
  */
 package dataStructures;
 
 public class ExpandableArray {
     // state
     private String[] data; // elements in the ExpandableArray
-    private  int count; // number of elements in the EA
+    private int count; // number of elements in the EA
 
     // constructor
     public ExpandableArray(){
@@ -60,6 +60,24 @@ public class ExpandableArray {
 
     // toString
     //
+    @Override
+    public String toString() {
+        String result = "[";
+        for (int i = 0; i < count; i++) {
+            result = result + data[i];
+            if (i != count - 1) {
+                result = result + ", ";
+            }
+        }
+        return result + "]";
+    }
+
+    public String get(int i) {
+        if (i >= 0 && i < count) {
+            return data[i];
+        }
+        throw new ArrayIndexOutOfBoundsException();
+    }
 
 
 
