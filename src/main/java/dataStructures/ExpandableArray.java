@@ -9,23 +9,31 @@
  */
 package dataStructures;
 
-public class ExpandableArray {
+import java.util.AbstractList;
+
+public class ExpandableArray<E> extends AbstractList<E> {
     // state
-    private String[] data; // elements in the ExpandableArray
+    private E[] data; // elements in the ExpandableArray
     private int count; // number of elements in the EA
 
     // constructor
+    @SuppressWarnings("unchecked")
     public ExpandableArray(){
         // we have to give instance variables value ...
         // how big do we want data to be to start with?
-        data = new String[10]; // we voted to hold 10 items, initially
+        data = (E[]) new Object[10]; // we voted to hold 10 items, initially
         count = 0;
+    }
+
+    @Override
+    public int size() {
+        return count;
     }
 
 
     // behavior/desired functionality ...
     // add
-    public void add(String s){
+    public void add(int index, E element){
         // What does add have to do?
         // Find the first empty spot, and then stick s in it.  But
         // also update the count!
@@ -37,18 +45,18 @@ public class ExpandableArray {
             expandArray();
         }
         // and then ...
-        data[count] = s;
+        data[count] = element;
         count++;
 
         // if we are worried that the count is wrong, we might choose to handle
         // this possibility by having an outer selection statement to throw an
         // error...
-
     }
 
+    @SuppressWarnings("unchecked")
     private void expandArray() {
         // make a new array, twice the length of data
-        String[] tempArray = new String[data.length*2];
+        E[] tempArray = (E[]) new Object[data.length*2];
         // copy data over
         for(int i = 0; i < count; i = i + 1){
             tempArray[i] = data[i];
@@ -72,7 +80,7 @@ public class ExpandableArray {
         return result + "]";
     }
 
-    public String get(int i) {
+    public E get(int i) {
         if (i >= 0 && i < count) {
             return data[i];
         }
