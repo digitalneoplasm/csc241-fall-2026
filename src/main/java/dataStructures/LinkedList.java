@@ -86,6 +86,10 @@ public class LinkedList<E> {
         throw new IndexOutOfBoundsException();
     }
 
+    public int size() {
+        return size;
+    }
+
     // 2 kinds of nested classes
     // 1) static inner class - can only access static members of the enclosing class.
     // 2) inner class - relies on the state of the 'this' instance of the outer class.
